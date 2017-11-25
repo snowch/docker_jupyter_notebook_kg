@@ -4,7 +4,7 @@ README
 Clone this repository:
 
 ```bash
-https://github.com/snowch/docker_jupyter_notebook_kg.git
+git clone https://github.com/snowch/docker_jupyter_notebook_kg.git
 cd docker_jupyter_notebook_kg
 ```
 
