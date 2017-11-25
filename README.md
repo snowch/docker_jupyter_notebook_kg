@@ -1,4 +1,13 @@
 README
+------
+
+Clone this repository:
+
+```bash
+https://github.com/snowch/docker_jupyter_notebook_kg.git
+cd docker_jupyter_notebook_kg
+```
+
 
 Build this docker image:
 
