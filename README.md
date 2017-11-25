@@ -13,6 +13,9 @@ Run the docker container with:
 # If you want to read the environment variables from a vcap_json run the command below
 source export_vars_from_vcap.sh
 
+# The local port to bind the notebook to
+NB_PORT=8889
+
 docker run -it --rm \
 	-e KG_HTTP_USER=$KG_HTTP_USER \
 	-e KG_HTTP_PASS=$KG_HTTP_PASS \
