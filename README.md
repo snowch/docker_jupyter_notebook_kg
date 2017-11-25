@@ -19,10 +19,14 @@ Run the docker container with:
 
 ```bash
 
-# If you want to read the environment variables from a vcap_json run the command below
+# If you want to read the environment variables from an IBM Analytics Engine vcap.json: 
+#  1. copy your vcap.json to this folder
+#  2. run the command below parse the vcap.json and export the required environment variables
+
 source export_vars_from_vcap.sh
 
 # The local port to bind the notebook to
+
 NB_PORT=8889
 
 docker run -it --rm \
