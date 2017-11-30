@@ -10,8 +10,10 @@ USER jovyan
 RUN pip install --upgrade pip
 
 # Install dashboard layout and preview within Jupyter Notebook
-RUN pip install "git+https://github.com/jupyter/kernel_gateway_demos.git#egg=nb2kg&subdirectory=nb2kg" && \
-    start.sh jupyter serverextension enable --py nb2kg --sys-prefix
+RUN pip install ipywidgets==7.0 && \
+    pip install "git+https://github.com/jupyter/kernel_gateway_demos.git#egg=nb2kg&subdirectory=nb2kg" && \
+    start.sh jupyter serverextension enable --py nb2kg --sys-prefix && \
+    start.sh jupyter nbextension enable --py widgetsnbextension --sys-prefix 
 
 ADD run_script.sh /home/jovyan/run_script.sh
 
