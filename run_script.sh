@@ -1,6 +1,8 @@
 #!/bin/bash
 
-jupyter notebook \
+set -e
+
+. /usr/local/bin/start.sh jupyter notebook \
      --no-browser \
      --port=$NB_PORT \
      --NotebookApp.ip=0.0.0.0 \
