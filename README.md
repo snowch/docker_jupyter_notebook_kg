@@ -40,3 +40,22 @@ docker run -it --rm \
 ```
 
 Open the brower with the url output from above
+
+----
+Clean build and run in one go ...
+
+```
+source export_vars_from_vcap.sh && \
+docker rm $(docker ps -q -f status=exited) ; \
+docker rmi $(docker images -q -f "dangling=true") ; \
+docker build --no-cache . -t jupyter-nb-iae && \ 
+export NB_PORT=8686 && \
+docker run -it --rm \
+	-e KG_HTTP_USER=$KG_HTTP_USER \
+	-e KG_HTTP_PASS=$KG_HTTP_PASS \
+	-e KG_URL=$KG_HTTP_URL \
+	-e KG_WS_URL=$KG_WS_URL \
+	-e NB_PORT=$NB_PORT \
+	-p $NB_PORT:$NB_PORT \
+	jupyter-nb-iae
+```
