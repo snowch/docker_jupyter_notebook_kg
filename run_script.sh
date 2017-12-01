@@ -4,7 +4,7 @@ set -e
 
 cd /home/jovyan/work
 
-. /usr/local/bin/start.sh jupyter notebook --debug \
+. /usr/local/bin/start.sh jupyter notebook \
      --no-browser \
      --port=$NB_PORT \
      --NotebookApp.ip=0.0.0.0 \
