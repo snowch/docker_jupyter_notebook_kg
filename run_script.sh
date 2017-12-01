@@ -2,6 +2,8 @@
 
 set -e
 
+cd /home/jovyan/work
+
 . /usr/local/bin/start.sh jupyter notebook --debug \
      --no-browser \
      --port=$NB_PORT \
