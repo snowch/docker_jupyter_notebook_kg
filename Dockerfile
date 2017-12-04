@@ -8,7 +8,7 @@ USER jovyan
 
 RUN pip install --upgrade pip && \
     pip install ipywidgets==7.0 && \
-    pip install "git+https://github.com/snowch/kernel_gateway_demos.git#egg=nb2kg&subdirectory=nb2kg" && \
+    pip install "git+https://github.com/jupyter/kernel_gateway_demos.git#egg=nb2kg&subdirectory=nb2kg" && \
     start.sh jupyter serverextension enable --py nb2kg --sys-prefix && \
     start.sh jupyter nbextension enable --py widgetsnbextension --sys-prefix 
 
